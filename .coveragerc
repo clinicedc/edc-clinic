@@ -1,0 +1,4 @@
+[run]
+include = edc_clinic/*
+omit = edc_clinic/tests/*,edc_auth/migrations/*
+branch = 1
