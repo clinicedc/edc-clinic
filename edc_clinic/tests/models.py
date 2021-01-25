@@ -6,6 +6,7 @@ from edc_clinic.models import (
 )
 from edc_constants.choices import YES_NO
 from edc_crf.model_mixins import CrfModelMixin
+from edc_list_data.model_mixins import ListModelMixin
 from edc_model import models as edc_models
 
 
@@ -36,3 +37,9 @@ class Glucose(
     class Meta(CrfModelMixin.Meta, edc_models.BaseUuidModel.Meta):
         verbose_name = "Glucose (IFG, OGTT)"
         verbose_name_plural = "Glucose (IFG, OGTT)"
+
+
+class NonAdherenceReasons(ListModelMixin):
+    class Meta(ListModelMixin.Meta):
+        verbose_name = "NonAdherence Reasons"
+        verbose_name_plural = "NonAdherence Reasons"
