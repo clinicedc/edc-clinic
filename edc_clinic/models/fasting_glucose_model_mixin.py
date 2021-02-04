@@ -17,7 +17,9 @@ class FastingGlucoseModelMixin(models.Model):
     )
 
     fasting_glucose_quantifier = models.CharField(
-        max_length=10, choices=RESULT_QUANTIFIER, default=EQ,
+        max_length=10,
+        choices=RESULT_QUANTIFIER,
+        default=EQ,
     )
 
     fasting_glucose_units = models.CharField(

@@ -10,7 +10,9 @@ from ..choices import GLUCOSE_UNITS_NA
 
 class GlucoseModelMixin(models.Model):
     glucose_date = models.DateField(
-        validators=[date_not_future], null=True, blank=True,
+        validators=[date_not_future],
+        null=True,
+        blank=True,
     )
 
     glucose_fasted = models.CharField(
@@ -30,7 +32,9 @@ class GlucoseModelMixin(models.Model):
     )
 
     glucose_quantifier = models.CharField(
-        max_length=10, choices=RESULT_QUANTIFIER_NA, default=NOT_APPLICABLE,
+        max_length=10,
+        choices=RESULT_QUANTIFIER_NA,
+        default=NOT_APPLICABLE,
     )
 
     glucose_units = models.CharField(

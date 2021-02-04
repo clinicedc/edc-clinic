@@ -25,7 +25,9 @@ class OgttModelMixin(models.Model):
     )
 
     ogtt_two_hr_quantifier = models.CharField(
-        max_length=10, choices=RESULT_QUANTIFIER, default=EQ,
+        max_length=10,
+        choices=RESULT_QUANTIFIER,
+        default=EQ,
     )
 
     ogtt_two_hr_units = models.CharField(
